@@ -168,7 +168,10 @@ typedef NS_ENUM(NSInteger, TOCropViewControllerToolbarPosition) {
  */
 @property (nonatomic, strong) NSArray *excludedActivityTypes;
 
-
+/**
+ *  To show/hide tool bar in landcape
+ */
+@property (nonatomic, assign) BOOL isHideToolBarInLandscape;
 
 ///------------------------------------------------
 /// @name Object Creation

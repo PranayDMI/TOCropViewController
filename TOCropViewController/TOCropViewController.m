@@ -184,9 +184,14 @@
 {
     CGRect frame = self.cropView.frame;
     if (verticalLayout ) {
-        frame.origin.x = 44.0f;
+        if (self.isHideToolBarInLandscape) {
+          frame.origin.x = 0.0f;
+          frame.size.width = CGRectGetWidth(self.view.bounds);
+        } else {
+          frame.origin.x = 44.0f;
+          frame.size.width = CGRectGetWidth(self.view.bounds) - 44.0f;
+        }
         frame.origin.y = 0.0f;
-        frame.size.width = CGRectGetWidth(self.view.bounds) - 44.0f;
         frame.size.height = CGRectGetHeight(self.view.frame);
     }
     else {
